@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🤖 Build with AI | Lenny's Podcast Navigator</title>
     <meta name="description" content="Learn how to integrate AI into your products - 41 episodes from Lenny's Podcast">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,9 +17,34 @@
             <p class="count">41 episodes</p>
         </header>
 
+        
+        <!-- Subcategory Filters -->
+        <div class="subcategory-filters">
+            <div class="filter-header">Filter by Topic:</div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    📋 All Episodes <span class="count" id="count-all">(41)</span>
+                </button>
+                <button class="filter-btn" data-filter="integration">
+                    ⚙️ AI Integration & Implementation <span class="count" id="count-integration">(16)</span>
+                </button>
+                <button class="filter-btn" data-filter="strategy">
+                    🎯 AI Product Strategy <span class="count" id="count-strategy">(32)</span>
+                </button>
+                <button class="filter-btn" data-filter="future">
+                    🔮 AI Trends & Future <span class="count" id="count-future">(10)</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Results Header -->
+        <div class="results-header">
+            <span id="results-text">Showing all 41 episodes</span>
+        </div>
+
         <div class="episodes-list">
             
-            <a href="https://www.youtube.com/watch?v=scsW6_2SPC4" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=scsW6_2SPC4" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="integration strategy">
                 <div class="episode-guest">Kevin Weil</div>
                 <div class="episode-title">OpenAI’s CPO on how AI changes must-have skills, moats, coding, startup playbooks, more | Kevin Weil</div>
                 <div class="episode-description">Kevin Weil is the chief product officer at OpenAI, where he oversees the development of ChatGPT, enterprise products, and the OpenAI API. Prior to OpenAI, Kevin was head of product at Twitter,...
@@ -33,7 +56,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=WyJV6VwEGA8" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=WyJV6VwEGA8" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="strategy">
                 <div class="episode-guest">Dylan Field</div>
                 <div class="episode-title">Figma’s CEO: Why AI makes design, craft, and quality the new moat for startups | Dylan Field</div>
                 <div class="episode-description">Dylan Field is co-founder and CEO of Figma, a beloved tool used by every modern product team. Founded in 2012, Figma has expanded from a single design tool to a comprehensive platform including...
@@ -45,7 +68,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=ixY2PvQJ0To" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=ixY2PvQJ0To" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="strategy">
                 <div class="episode-guest">Nick Turley</div>
                 <div class="episode-title">Inside ChatGPT: The fastest growing product in history | Nick Turley (OpenAI)</div>
                 <div class="episode-description">Nick Turley is Head of ChatGPT, the fastest-growing product in history, with 700 million weekly active users (10% of the world's population). He was part of the original hackathon team that built ChatGPT.</div>
@@ -56,7 +79,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=Ctjiatnd6Xk" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=Ctjiatnd6Xk" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="integration future">
                 <div class="episode-guest">Fei Fei</div>
                 <div class="episode-title">The Godmother of AI on jobs, robots & why world models are next | Dr. Fei-Fei Li</div>
                 <div class="episode-description">Dr. Fei-Fei Li is known as the “godmother of AI.” She’s been at the center of AI’s biggest breakthroughs for over two decades. She spearheaded ImageNet, the dataset that sparked the...
@@ -68,7 +91,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=DKrBGOFs0GY" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=DKrBGOFs0GY" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="strategy future">
                 <div class="episode-guest">Mike Krieger</div>
                 <div class="episode-title">Anthropic's CPO on what comes next | Mike Krieger (co-founder of Instagram)</div>
                 <div class="episode-description">Mike Krieger is the chief product officer of Anthropic and the co-founder of Instagram. After leaving Meta, he co-founded Artifact, an AI-powered news app that I absolutely loved, and joined...
@@ -80,7 +103,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=iT7kq-R3Gjc" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=iT7kq-R3Gjc" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="strategy">
                 <div class="episode-guest">Ethan Smith</div>
                 <div class="episode-title">The ultimate guide to AEO: How to get ChatGPT to recommend your product | Ethan Smith (Graphite)</div>
                 <div class="episode-description">Ethan Smith is the CEO of Graphite—the leading SEO growth agency—and my go-to expert on SEO. After 18 years of mastering traditional SEO, Ethan has been at the forefront of what is called...
@@ -92,7 +115,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=Z71yGshPTwk" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=Z71yGshPTwk" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="integration strategy">
                 <div class="episode-guest">Eli Schwartz</div>
                 <div class="episode-title">Rethinking SEO in the age of AI | Eli Schwartz (SEO advisor, author)</div>
                 <div class="episode-description">Eli Schwartz is a leading SEO consultant and the author of Product-Led SEO. He has worked with industry giants like Zapier, Tinder, Coinbase, Quora, LinkedIn, and WordPress to build and execute...
@@ -104,7 +127,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=eKuFqQKYRrA" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=eKuFqQKYRrA" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="integration">
                 <div class="episode-guest">Sander Schulhoff</div>
                 <div class="episode-title">AI prompt engineering in 2025: What works and what doesn’t | Sander Schulhoff</div>
                 <div class="episode-description">Sander Schulhoff is the OG prompt engineer. He created the very first prompt engineering guide on the internet (two months before ChatGPT’s release) and recently wrote the most comprehensive...
@@ -116,7 +139,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=dpw9Ue1HU48" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=dpw9Ue1HU48" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="strategy">
                 <div class="episode-guest">Dharmesh Shah</div>
                 <div class="episode-title">Zigging vs. zagging: How HubSpot built a $30B company | Dharmesh Shah (co-founder/CTO)</div>
                 <div class="episode-description">Dharmesh Shah is the co-founder and CTO of HubSpot (currently valued at $30 billion) and one of the most fascinating founders I’ve ever met. Dharmesh is the keeper of HubSpot’s Culture...
@@ -128,7 +151,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=qNPPoj1qUG0" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=qNPPoj1qUG0" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="strategy">
                 <div class="episode-guest">Marily Nika</div>
                 <div class="episode-title">AI and product management | Marily Nika (Meta, Google)</div>
                 <div class="episode-description">Marily is a computer scientist and an AI Product Leader currently working for Meta’s reality labs, and previously at Google for 8 years. In 2014 she completed a PhD in Machine Learning. She...
@@ -140,7 +163,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=QaDsk4iH1aw" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=QaDsk4iH1aw" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="strategy">
                 <div class="episode-guest">Krithika Shankarraman</div>
                 <div class="episode-title">Growth tactics from OpenAI and Stripe’s first marketer | Krithika Shankarraman</div>
                 <div class="episode-description">Krithika Shankarraman was the first marketing hire at OpenAI and Stripe and led marketing at Retool. At OpenAI, she established marketing foundations for ChatGPT for consumers and enterprises,...
@@ -152,7 +175,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=RmnWHz8HD74" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=RmnWHz8HD74" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="strategy">
                 <div class="episode-guest">Jeanne Grosser</div>
                 <div class="episode-title">What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)</div>
                 <div class="episode-description">Jeanne DeWitt Grosser built world-class GTM teams at Stripe, Google, and, most recently, Vercel, where she serves as COO and oversees marketing, sales, customer success, revenue operations,...
@@ -164,7 +187,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=dduQeaqmpnI" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=dduQeaqmpnI" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="future">
                 <div class="episode-guest">Edwin Chen</div>
                 <div class="episode-title">The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen</div>
                 <div class="episode-description">Edwin Chen is the founder and CEO of Surge AI, the company that teaches AI what’s good vs. what’s bad, powering frontier labs with elite data, environments, and evaluations. Surge surpassed...
@@ -176,7 +199,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=c_w0LaFahxk" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=c_w0LaFahxk" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="future">
                 <div class="episode-guest">Julie Zhuo</div>
                 <div class="episode-title">From managing people to managing AI: The leadership skills everyone needs now | Julie Zhuo</div>
                 <div class="episode-description">Julie Zhuo is the former VP and Head of Design at Facebook (now Meta), author of the bestselling book The Making of a Manager, and co-founder of Sundial, an AI-powered data analysis company....
@@ -188,7 +211,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=NR85H55eYkM" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=NR85H55eYkM" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="strategy future">
                 <div class="episode-guest">Madhavan Ramanujam</div>
                 <div class="episode-title">Pricing your AI product: Lessons from 400+ companies and 50 unicorns | Madhavan Ramanujam</div>
                 <div class="episode-description">Madhavan Ramanujam is the world’s foremost expert on pricing and monetization strategy. As managing partner at Simon-Kucher, he helped over 250 companies, including 30 unicorns, architect...
@@ -200,7 +223,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=BVzTfsUMaK8" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=BVzTfsUMaK8" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="strategy">
                 <div class="episode-guest">Ramesh Johari</div>
                 <div class="episode-title">Marketplace lessons from Uber, Airbnb, Bumble, and more | Ramesh Johari (Stanford professor)</div>
                 <div class="episode-description">Ramesh Johari is a professor at Stanford University focusing on data science methods and practice, as well as the design and operation of online markets and platforms. Beyond academia, Ramesh...
@@ -212,7 +235,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=qbvY0dQgSJ4" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=qbvY0dQgSJ4" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="integration">
                 <div class="episode-guest">Chip Huyen</div>
                 <div class="episode-title">Al Engineering 101 with Chip Huyen (Nvidia, Stanford, Netflix)</div>
                 <div class="episode-description">Chip Huyen is a core developer on Nvidia’s Nemo platform, a former AI researcher at Netflix, and taught machine learning at Stanford. She’s a two-time founder and the author of two widely...</div>
@@ -223,7 +246,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=cX4cL6B-_aU" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=cX4cL6B-_aU" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="integration strategy future">
                 <div class="episode-guest">Brian Balfour</div>
                 <div class="episode-title">Why ChatGPT will be the next big growth channel (and how to capitalize on it) | Brian Balfour</div>
                 <div class="episode-description">Brian Balfour is the founder of Reforge, the former VP of Growth at HubSpot, and a student (and teacher) of product growth. Brian has studied every major platform shift—from Facebook to Apple...
@@ -235,7 +258,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=JMeXWVw0r3E" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=JMeXWVw0r3E" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="integration">
                 <div class="episode-guest">Dhanji R. Prasanna</div>
                 <div class="episode-title">How Block is becoming the most AI-native enterprise in the world | Dhanji R. Prasanna</div>
                 <div class="episode-description">Dhanji R. Prasanna is the chief technology officer at Block (formerly Square), where he’s managed more than 4,000 engineers over the past two years. Under his leadership, Block has become...
@@ -247,7 +270,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=aXGo1o_baBo" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=aXGo1o_baBo" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="strategy">
                 <div class="episode-guest">Claire Vo</div>
                 <div class="episode-title">Bending the universe in your favor | Claire Vo (LaunchDarkly, Color, Optimizely, ChatPRD)</div>
                 <div class="episode-description">Claire Vo is the chief product officer at LaunchDarkly and the founder of ChatPRD, likely the most popular PM-specific AI product out there. Before LaunchDarkly, she was a longtime chief product...
@@ -259,7 +282,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=ja6fWTDPQl4" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=ja6fWTDPQl4" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="strategy">
                 <div class="episode-guest">Brendan Foody</div>
                 <div class="episode-title">Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody</div>
                 <div class="episode-description">Brendan Foody is the CEO and co-founder of Mercor, the fastest-growing company in history to go from $1M to $500M in revenue (in just 17 months!). At 22, he is also the youngest American unicorn...
@@ -271,7 +294,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=GT0jtVjRy2E" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=GT0jtVjRy2E" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="strategy">
                 <div class="episode-guest">Howie Liu</div>
                 <div class="episode-title">How we restructured Airtable's entire org for AI | Howie Liu (co-founder and CEO)</div>
                 <div class="episode-description">Howie Liu is the co-founder and CEO of Airtable, the no-code platform valued at around $12 billion. After a viral tweet declared “Airtable is dead” based on incorrect data, Howie led a...
@@ -283,7 +306,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=ZoSeOltKqQk" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=ZoSeOltKqQk" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="strategy">
                 <div class="episode-guest">Tamar Yehoshua</div>
                 <div class="episode-title">Lessons in product leadership and AI strategy from Glean, Google, Amazon, and Slack | Tamar Yehoshua</div>
                 <div class="episode-description">Tamar Yehoshua is the president of product and technology at Glean. Prior to joining Glean, Tamar was chief product officer at Slack, where she led product, design, and research as the company...
@@ -295,7 +318,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=wgrJNHlYUA8" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=wgrJNHlYUA8" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="strategy">
                 <div class="episode-guest">Cam Adams</div>
                 <div class="episode-title">Inside Canva: Coaches not managers, giving away your Legos, and embracing AI | Cameron Adams</div>
                 <div class="episode-description">Cameron Adams is the co-founder and chief product officer of Canva. Canva is one of the world’s most valuable private software companies, used by 95% of Fortune 500 companies. Since its...
@@ -307,7 +330,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=R-Geamq9xc0" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=R-Geamq9xc0" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="strategy">
                 <div class="episode-guest">Paul Adams</div>
                 <div class="episode-title">What AI means for your product strategy | Paul Adams (CPO of Intercom)</div>
                 <div class="episode-description">Paul Adams is the longtime chief product officer at Intercom, where he leads the product management, product design, data science, and research teams. Before Intercom, Paul was the global head...
@@ -319,7 +342,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=R-zCfLQD_84" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=R-zCfLQD_84" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="integration strategy">
                 <div class="episode-guest">Tomer Cohen</div>
                 <div class="episode-title">Why AI is disrupting traditional product management | Tomer Cohen (LinkedIn CPO)</div>
                 <div class="episode-description">Tomer Cohen is the longtime chief product officer at LinkedIn, where he’s pioneering the Full Stack Builder program, a radical new approach to product development that fully embraces what...
@@ -331,7 +354,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=DeskgjrLxxs" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=DeskgjrLxxs" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="integration strategy future">
                 <div class="episode-guest">Karina Nguyen</div>
                 <div class="episode-title">OpenAI researcher on why soft skills are the future of work | Karina Nguyen</div>
                 <div class="episode-description">Karina Nguyen leads research at OpenAI, where she’s been pivotal in developing groundbreaking products like Canvas, Tasks, and the o1 language model. Before OpenAI, Karina was at Anthropic,...
@@ -343,7 +366,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=z7T1pCxgvlA" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=z7T1pCxgvlA" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="integration strategy">
                 <div class="episode-guest">Aishwarya Naresh Reganti + Kiriti Badam</div>
                 <div class="episode-title">Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon</div>
                 <div class="episode-description">Aishwarya Naresh Reganti and Kiriti Badam have helped build and launch more than 50 enterprise AI products across companies like OpenAI, Google, Amazon.</div>
@@ -354,7 +377,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=gI0ZNhA0rvE" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=gI0ZNhA0rvE" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="integration">
                 <div class="episode-guest">Scott Wu</div>
                 <div class="episode-title">Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu</div>
                 <div class="episode-description">*Scott Wu* is the co-founder and CEO of Cognition, the company behind Devin—the world’s first autonomous AI software engineer. Unlike other AI coding tools, Devin works like an autonomous...
@@ -366,7 +389,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=XkMbkWG2ca4" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=XkMbkWG2ca4" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="integration">
                 <div class="episode-guest">Logan Kilpatrick</div>
                 <div class="episode-title">Inside OpenAI | Logan Kilpatrick (head of developer relations)</div>
                 <div class="episode-description">Logan Kilpatrick leads developer relations at OpenAI, supporting developers building with the OpenAI API and ChatGPT. He is also on the board of directors at NumFOCUS, the nonprofit organization...
@@ -378,7 +401,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=dLku0AiGPVA" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=dLku0AiGPVA" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="strategy">
                 <div class="episode-guest">Gaurav Misra</div>
                 <div class="episode-title">Mastering onboarding | Lauryn Isford (Head of Growth at Airtable)</div>
                 <div class="episode-description">Lauryn Isford is a product growth leader and practitioner, who most recently led Growth at Airtable, and is about to start something new 🤫.  In today’s episode, we get into the many tactics...
@@ -390,7 +413,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=W99jdYZOlN0" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=W99jdYZOlN0" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="integration future">
                 <div class="episode-guest">Jason Droege</div>
                 <div class="episode-title">Scale AI CEO on Meta's $14B deal, scaling Uber Eats to $80B, & what frontier labs are building next</div>
                 <div class="episode-description">Jason Droege is the CEO of Scale AI, a company that provides foundational training data to every major AI lab. He previously co-founded Scour with Travis Kalanick.</div>
@@ -401,7 +424,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=SWcDfPVTizQ" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=SWcDfPVTizQ" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="integration strategy">
                 <div class="episode-guest">Nicole Forsgren</div>
                 <div class="episode-title">How to measure AI developer productivity in 2025 | Nicole Forsgren</div>
                 <div class="episode-description">Nicole Forsgren created the most widely used frameworks for measuring developer productivity—DORA and SPACE. She wrote the foundational book Accelerate and is about to release her newest...
@@ -413,7 +436,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=B79p85DHLkU" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=B79p85DHLkU" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="strategy">
                 <div class="episode-guest">Austin Hay</div>
                 <div class="episode-title">The ultimate guide to Martech | Austin Hay (Reforge, Ramp, Runway)</div>
                 <div class="episode-description">Austin Hay is currently Head of Marketing Technology at Ramp and was previously the VP of Business Operations at Runway, the VP of Growth at mParticle, and the fourth employee at the unicorn...
@@ -425,7 +448,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=xZifSLGOrrw" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=xZifSLGOrrw" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="strategy">
                 <div class="episode-guest">Alexander Embiricos</div>
                 <div class="episode-title">How to drive word of mouth | Nilan Peiris (CPO of Wise)</div>
                 <div class="episode-description">Nilan Peiris is Chief Product Officer at Wise, one of the fastest-growing (and profitable) tech companies in the world. Wise allows anyone to send money in more than 60 currencies to over 160...
@@ -437,7 +460,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=XrRlVOWe5GE" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=XrRlVOWe5GE" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="strategy">
                 <div class="episode-guest">Noah Weiss</div>
                 <div class="episode-title">The 10 traits of great PMs, AI, and Slack’s approach to product | Noah Weiss (Slack, Google)</div>
                 <div class="episode-description">Noah Weiss is Chief Product Officer at Slack, where he leads all aspects of the product organization, including the self-service SMB business, the team that launched huddles and clips, and...
@@ -449,7 +472,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=f10s3rxKaJw" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=f10s3rxKaJw" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="integration strategy future">
                 <div class="episode-guest">Inbal S</div>
                 <div class="episode-title">The future of AI in software development | Inbal Shani (CPO of GitHub)</div>
                 <div class="episode-description">Inbal Shani is the chief product officer at GitHub, where she leads core product management, along with product strategy, marketing, open source, and communities, including the development...
@@ -461,7 +484,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=Xf_ZXIGCQb0" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=Xf_ZXIGCQb0" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="strategy future">
                 <div class="episode-guest">Luc Levesque</div>
                 <div class="episode-title">Leveraging growth advisors, mastering SEO, and honing your craft | Luc Levesque (Shopify, Meta)</div>
                 <div class="episode-description">Luc Levesque is Chief Growth Officer at Shopify and has advised companies like Canva, Twitter, Pinterest, and Patreon on growth and product strategy. Previously he served as an executive at...
@@ -473,7 +496,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=VtNmAjNF3Tc" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=VtNmAjNF3Tc" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="strategy">
                 <div class="episode-guest">Shweta Shriva</div>
                 <div class="episode-title">Product lessons from Waymo | Shweta Shrivastava (Waymo, Amazon, Cisco)</div>
                 <div class="episode-description">Shweta Shrivastava is a Senior Product Leader at Waymo, an autonomous driving technology company backed by Alphabet. Prior to joining Waymo, she was the CPO of Nauto, where she also worked...
@@ -485,7 +508,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=awcd3P1DnX4" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=awcd3P1DnX4" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="integration strategy">
                 <div class="episode-guest">Ryan J. Salva</div>
                 <div class="episode-title">The role of AI in new product development | Ryan J. Salva (VP of Product at GitHub)</div>
                 <div class="episode-description">Ryan J. Salva is the VP of Product at GitHub, where he led the incubation and launch of Copilot, which uses OpenAI to suggest code and entire functions in real time, right from your editor,...
@@ -497,7 +520,7 @@
                 </div>
             </a>
         
-            <a href="https://www.youtube.com/watch?v=rG4zxf0CAv0" target="_blank" rel="noopener noreferrer" class="episode-card">
+            <a href="https://www.youtube.com/watch?v=rG4zxf0CAv0" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="strategy">
                 <div class="episode-guest">Jonathan Becker</div>
                 <div class="episode-title">The crazy story of landing Uber as a client | Jonathan Becker (Thrive Digital)</div>
                 <div class="episode-description">Jonathan explains how he went from exploiting Uber's marketing loophole to landing them as a client.
@@ -515,9 +538,66 @@
         </div>
 
         <footer>
-            <p>Built by <a href="https://github.com/raoulkahn" target="_blank">Raoul Kahn</a> • Episodes from <a href="https://www.lennysnewsletter.com/podcast" target="_blank">Lenny's Podcast</a></p>
+            <p>Built by <a href="https://github.com/yourusername" target="_blank">Ra</a> • Episodes from <a href="https://www.lennysnewsletter.com/podcast" target="_blank">Lenny's Podcast</a></p>
             <p class="disclaimer">This is an unofficial fan-made navigation tool. All episodes © Lenny Rachitsky</p>
         </footer>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const episodeCards = document.querySelectorAll('.episode-card');
+            const resultsText = document.getElementById('results-text');
+            
+            // Filter names for display
+            const filterNames = {
+                'all': 'all',
+                'integration': 'AI Integration & Implementation',
+                'strategy': 'AI Product Strategy',
+                'future': 'AI Trends & Future'
+            };
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter episodes and count visible ones
+                    let visibleCount = 0;
+                    episodeCards.forEach(card => {
+                        if (filter === 'all') {
+                            card.style.display = 'flex';
+                            visibleCount++;
+                        } else {
+                            const categories = card.getAttribute('data-category');
+                            if (categories && categories.includes(filter)) {
+                                card.style.display = 'flex';
+                                visibleCount++;
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                    
+                    // Update results header
+                    if (filter === 'all') {
+                        resultsText.textContent = `Showing all ${visibleCount} episodes`;
+                    } else {
+                        resultsText.textContent = `Displaying ${visibleCount} ${filterNames[filter]} episodes`;
+                    }
+                    
+                    // Smooth scroll to top of episodes list
+                    document.querySelector('.results-header').scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
