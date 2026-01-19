@@ -202,6 +202,19 @@ body {
     color: rgba(255, 255, 255, 0.8);
 }
 
+/* Results Header */
+.results-header {
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--border);
+}
+
+#results-text {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
 .back-link {
     display: inline-flex;
     align-items: center;

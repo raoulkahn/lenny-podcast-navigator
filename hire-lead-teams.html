@@ -40,6 +40,11 @@
             </div>
         </div>
 
+        <!-- Results Header -->
+        <div class="results-header">
+            <span id="results-text">Showing all 134 episodes</span>
+        </div>
+
         <div class="episodes-list">
             
             <a href="https://www.youtube.com/watch?v=4ef0juAMqoE" target="_blank" rel="noopener noreferrer" class="episode-card" data-category="leadership">
@@ -1662,6 +1667,16 @@ Matt Mochary, CEO of Mochary Method, is...
         document.addEventListener('DOMContentLoaded', function() {
             const filterButtons = document.querySelectorAll('.filter-btn');
             const episodeCards = document.querySelectorAll('.episode-card');
+            const resultsText = document.getElementById('results-text');
+            
+            // Filter names for display
+            const filterNames = {
+                'all': 'all',
+                'leadership': 'Leadership & Strategy',
+                'hiring': 'Hiring & Talent',
+                'culture': 'Team Culture & Management',
+                'decision': 'Decision Making & Influence'
+            };
             
             filterButtons.forEach(button => {
                 button.addEventListener('click', function() {
@@ -1671,22 +1686,32 @@ Matt Mochary, CEO of Mochary Method, is...
                     filterButtons.forEach(btn => btn.classList.remove('active'));
                     this.classList.add('active');
                     
-                    // Filter episodes
+                    // Filter episodes and count visible ones
+                    let visibleCount = 0;
                     episodeCards.forEach(card => {
                         if (filter === 'all') {
                             card.style.display = 'flex';
+                            visibleCount++;
                         } else {
                             const categories = card.getAttribute('data-category');
                             if (categories && categories.includes(filter)) {
                                 card.style.display = 'flex';
+                                visibleCount++;
                             } else {
                                 card.style.display = 'none';
                             }
                         }
                     });
                     
+                    // Update results header
+                    if (filter === 'all') {
+                        resultsText.textContent = `Showing all ${visibleCount} episodes`;
+                    } else {
+                        resultsText.textContent = `Displaying ${visibleCount} ${filterNames[filter]} episodes`;
+                    }
+                    
                     // Smooth scroll to top of episodes list
-                    document.querySelector('.episodes-list').scrollIntoView({ 
+                    document.querySelector('.results-header').scrollIntoView({ 
                         behavior: 'smooth',
                         block: 'start'
                     });
